@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-people',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PeoplePage implements OnInit {
 
-  constructor() { }
+  constructor(private navController: NavController, private router: Router) { }
 
   ngOnInit() {
   }
+
+  openDetails(){
+    this.router.navigateByUrl(`/tabs/films/42`);
+    }
+  
+    goToPlanets(){
+      this.navController.navigateRoot('/tabs/planets')
+    }
 
 }
