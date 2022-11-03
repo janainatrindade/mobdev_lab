@@ -38,10 +38,13 @@ const routes: Routes = [
             loadChildren: () => import('../planets/planets.module').then(m => m.PlanetsPageModule)
           }
         ]
-      },
-
-
+      }
     ]
+  },
+  {
+    path: '',
+    redirectTo: '/tabs/films',
+    pathMatch: 'full'
   }
 ];
 
