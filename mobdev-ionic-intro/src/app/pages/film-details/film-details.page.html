@@ -16,8 +16,9 @@
 </ion-header>
  
 <ion-content padding="">
- 
-  <ion-card *ngif="film" class="movie-card">
+
+	
+  <ion-card *ngIf="film" class="movie-card">
     <ion-card-header>Episode {{ film.episode_id }}: {{ film.title }}</ion-card-header>
     <ion-card-content>
       {{ film.opening_crawl }}
@@ -32,6 +33,7 @@
       <ion-icon name="calendar" slot="start"></ion-icon>
       Release Date: {{ film.release_date | date }}
     </ion-item>
+  
   </ion-card>
- 
+
 </ion-content>
