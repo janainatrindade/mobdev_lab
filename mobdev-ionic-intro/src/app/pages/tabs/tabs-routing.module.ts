@@ -13,11 +13,11 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            loadChildren: () => import('../films/films.module').then(m => m.FilmsPageModule)
+            loadChildren: () => import('../films/films.module').then( m => m.FilmsPageModule)
           },
           {
-            path: 'id',
-            loadChildren: () => import('../film-details/film-details.module').then(m => m.FilmDetailsPageModule)
+            path: ':id',
+            loadChildren: () => import('../film-details/film-details.module').then( m => m.FilmDetailsPageModule)
           }
         ]
       },
@@ -26,7 +26,7 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            loadChildren: () => import('../people/people.module').then(m => m.PeoplePageModule)
+            loadChildren: () => import('../people/people.module').then( m => m.PeoplePageModule)
           }
         ]
       },
@@ -35,7 +35,7 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            loadChildren: () => import('../planets/planets.module').then(m => m.PlanetsPageModule)
+            loadChildren: () => import('../planets/planets.module').then( m => m.PlanetsPageModule)
           }
         ]
       }
