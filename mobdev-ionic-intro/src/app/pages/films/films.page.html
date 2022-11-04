@@ -3,7 +3,7 @@
     <ion-title>Films</ion-title>
   </ion-toolbar>
 </ion-header>
-
+ 
 <ion-content>
   <ion-list>
     <ion-item button detail lines="inset" *ngFor="let film of (films | async)?.results" (click)="openDetails(film)">
